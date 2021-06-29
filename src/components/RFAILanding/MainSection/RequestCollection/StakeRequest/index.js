@@ -205,8 +205,13 @@ const StakeRequest = ({
             <AlertBox type={alert.type} message={alert.message} />
           </CardContent>
           <CardActions className={classes.CardActions}>
-            <StyledButton btnText="Close" type="transparent" onClick={handleCancel} />
-            <StyledButton btnText="submit funds" type="blue" onClick={handleSubmit} disabled={actionToDisable} />
+            <StyledButton btnText="Close" type="transparent" onClick={handleCancel} disabled />
+            <StyledButton
+              btnText="submit funds"
+              type="blue"
+              onClick={handleSubmit}
+              disabled={actionToDisable || true}
+            />
           </CardActions>
         </Card>
       </Modal>

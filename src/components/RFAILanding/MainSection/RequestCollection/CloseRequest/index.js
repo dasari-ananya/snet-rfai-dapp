@@ -108,8 +108,13 @@ const CloseRequest = ({
             <AlertBox type={alert.type} message={alert.message} />
           </CardContent>
           <CardActions className={classes.CardActions}>
-            <StyledButton btnText="Cancel" type="transparent" onClick={handleCancel} />
-            <StyledButton btnText="Close Request" type="redBg" onClick={handleSubmit} disabled={actionToDisable} />
+            <StyledButton btnText="Cancel" type="transparent" onClick={handleCancel} disabled />
+            <StyledButton
+              btnText="Close Request"
+              type="redBg"
+              onClick={handleSubmit}
+              disabled={actionToDisable || true}
+            />
           </CardActions>
         </Card>
       </Modal>

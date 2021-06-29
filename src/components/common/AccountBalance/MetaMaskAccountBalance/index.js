@@ -289,6 +289,7 @@ class MetaMaskAccountBalance extends Component {
             type="blue"
             btnText={activeComponent.name}
             onClick={event => this.handleDepositWithdraw(event, activeComponent.name)}
+            disabled
           />
         </div>
       </div>
